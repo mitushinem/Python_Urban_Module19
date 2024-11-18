@@ -1,0 +1,28 @@
+{% extends 'menu.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<div class="container">
+        {% block pagename %}
+            <h1>{{ title }}</h1>
+        {% endblock %}
+    
+        {% block menu %}
+            {{ block.super }}
+        {% endblock %}
+
+        {% block content %}
+            <h2>Извените, Ваша корзина пуста</h2>
+        {% endblock %} 
+</div> 
+
+<form action="/platform/" target="_blank">
+   <button>Вернуться обратно</button>
+</form>
+
+</body>
+</html>

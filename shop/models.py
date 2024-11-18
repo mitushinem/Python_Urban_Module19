@@ -8,6 +8,11 @@ class Buyer(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "Buyer"
+        verbose_name_plural = "Buyers"
+        ordering = ['name']
+
 
 class Game(models.Model):
     title = models.CharField(max_length=100)
@@ -18,4 +23,9 @@ class Game(models.Model):
     buyer = models.ManyToManyField(Buyer, related_name='games')
 
     def __str__(self):
-        return self.title
+        return f'{self.title} | {self.description}. Стоимость: {self.cost}'
+
+    class Meta:
+        verbose_name = "Game"
+        verbose_name_plural = "Games"
+        ordering = ['title']
