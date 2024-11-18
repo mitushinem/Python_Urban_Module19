@@ -18,4 +18,4 @@ class Game(models.Model):
     buyer = models.ManyToManyField(Buyer, related_name='games')
 
     def __str__(self):
-        return self.title
+        return f'{self.title} | {self.description}. Стоимость: {self.cost}'

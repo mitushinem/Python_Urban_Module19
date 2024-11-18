@@ -1,0 +1,38 @@
+
+{% extends 'menu.html' %}
+
+{% block pagename %}
+    <h1>{{ title }}</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    
+    
+{% if info.error %}
+    <h2>{{ info.error }}</h2>
+{% else %}
+     <h2>{{ info.success }}</h2>
+    
+{% endif %}
+<div class="form-center">
+    <form method="post">
+        
+            <h2>Форма регистрации</h2>
+            <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+            <hr>
+            
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+         
+            <button type="submit">Отправить</button>
+         
+       
+</form>
+</div>
+
+{% endblock %} 

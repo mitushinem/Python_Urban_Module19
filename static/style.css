@@ -1,0 +1,52 @@
+h1 {
+    color: #068358;
+    text-align: center;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.markers li::marker {
+	color: red;
+}
+.markers li {
+    font-size: 18px;
+    padding-left: 15px;
+    margin-left: 50px;
+    line-height: 2;
+}
+
+button {
+    font-size: 14px;
+    margin: 10px;
+    color: #068358;
+}
+
+a {
+    font-size: 30px;
+    color: blue;
+    text-decoration: none;
+    margin: 15px 25px;
+    padding: 15px 20px;
+    line-height: 1.5;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 16px;
+}
+
+.form-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
